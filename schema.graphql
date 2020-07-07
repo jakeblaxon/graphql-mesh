@@ -322,6 +322,8 @@ type Transform {
   resolversComposition: [ResolversCompositionTransformObject!]
   """Configuration for Snapshot extension"""
   snapshot: SnapshotTransformConfig
+  """Transformer to apply a custom transformation to your data sources"""
+  custom: CustomTransformConfig
 }
 union AdditionalResolver = String | AdditionalResolverObject
 type AdditionalResolverObject {
@@ -570,5 +572,11 @@ type TuqlHandler @md {
   db: String
   """Path to the SQL Dump file if you want to build a in-memory database"""
   infile: String
+}
+type CustomTransformConfig @md {
+  """The path to the module that exports the custom transform"""
+  path: String!
+  """Custom parameters to pass to the transform function"""
+  params: [String!]
 }
 directive @md on OBJECT

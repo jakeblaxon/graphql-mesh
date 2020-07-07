@@ -1013,6 +1013,10 @@
         "snapshot": {
           "$ref": "#/definitions/SnapshotTransformConfig",
           "description": "Configuration for Snapshot extension"
+        },
+        "custom": {
+          "$ref": "#/definitions/CustomTransformConfig",
+          "description": "Transformer to apply a custom transformation to your data sources"
         }
       }
     },
@@ -1604,6 +1608,28 @@
           "description": "Path to the SQL Dump file if you want to build a in-memory database"
         }
       }
+    },
+    "CustomTransformConfig": {
+      "additionalProperties": false,
+      "type": "object",
+      "title": "CustomTransformConfig",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "The path to the module that exports the custom transform"
+        },
+        "params": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "additionalItems": false,
+          "description": "Custom parameters to pass to the transform function"
+        }
+      },
+      "required": [
+        "path"
+      ]
     }
   },
   "title": "Config",

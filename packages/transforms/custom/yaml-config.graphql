@@ -1,0 +1,17 @@
+extend type Transform {
+  """
+  Transformer to apply a custom transformation to your data sources
+  """
+  custom: CustomTransformConfig
+}
+
+type CustomTransformConfig @md {
+  """
+  The path to the module that exports the custom transform
+  """
+  path: String!
+  """
+  Custom parameters to pass to the transform function
+  """
+  params: [String!]
+}
