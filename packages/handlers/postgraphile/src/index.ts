@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
+import { loadFromModuleExportExpression } from '@jakeblaxon-graphql-mesh/utils';
 import { execute, subscribe } from 'graphql';
 import { withPostGraphileContext, Plugin } from 'postgraphile';
 import { getPostGraphileBuilder } from 'postgraphile-core';
@@ -27,7 +28,9 @@ const handler: MeshHandlerLibrary<YamlConfig.PostGraphileHandler> = {
 
     let writeCache: () => Promise<void>;
 
-    const appendPlugins = await Promise.all<Plugin>((config.plugins || []).map(pluginName => import(pluginName)));
+    const appendPlugins = await Promise.all<Plugin>(
+      (config.plugins || []).map(pluginName => loadFromModuleExportExpression(pluginName))
+    );
 
     const builder = await getPostGraphileBuilder(pgPool, config.schemaName || 'public', {
       dynamicJson: true,

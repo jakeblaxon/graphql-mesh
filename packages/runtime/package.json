@@ -1,6 +1,6 @@
 {
   "name": "@jakeblaxon-graphql-mesh/runtime",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "license": "MIT",
   "peerDependencies": {
     "graphql": "*"
@@ -13,10 +13,10 @@
     "definition": "dist/index.d.ts"
   },
   "dependencies": {
-    "@jakeblaxon-graphql-mesh/cache-inmemory-lru": "0.2.15",
-    "@jakeblaxon-graphql-mesh/merger-stitching": "0.2.15",
-    "@jakeblaxon-graphql-mesh/types": "0.2.15",
-    "@jakeblaxon-graphql-mesh/utils": "0.2.15",
+    "@jakeblaxon-graphql-mesh/cache-inmemory-lru": "0.2.16",
+    "@jakeblaxon-graphql-mesh/merger-stitching": "0.2.16",
+    "@jakeblaxon-graphql-mesh/types": "0.2.16",
+    "@jakeblaxon-graphql-mesh/utils": "0.2.16",
     "ajv": "6.12.2",
     "cosmiconfig": "6.0.0",
     "@graphql-tools/delegate": "6.0.12",

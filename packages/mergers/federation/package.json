@@ -1,6 +1,6 @@
 {
   "name": "@jakeblaxon-graphql-mesh/merger-federation",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "sideEffects": false,
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,7 +13,7 @@
     "graphql": "*"
   },
   "dependencies": {
-    "@jakeblaxon-graphql-mesh/types": "0.2.15",
+    "@jakeblaxon-graphql-mesh/types": "0.2.16",
     "@apollo/gateway": "0.17.0",
     "fetchache": "0.0.3",
     "@graphql-tools/wrap": "6.0.12",
