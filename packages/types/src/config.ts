@@ -627,6 +627,7 @@ export interface Transform {
    * Transformer to apply caching for your data sources
    */
   cache?: CacheTransformConfig[];
+  custom?: CustomTransformConfig;
   federation?: FederationTransform;
   filterSchema?: string[];
   mock?: MockingConfig;
@@ -641,7 +642,6 @@ export interface Transform {
    */
   resolversComposition?: ResolversCompositionTransformObject[];
   snapshot?: SnapshotTransformConfig;
-  custom?: CustomTransformConfig;
 }
 export interface CacheTransformConfig {
   /**
@@ -688,6 +688,19 @@ export interface CacheEffectingOperationConfig {
    * Cache key to invalidate on sucessful resolver (no error), see `cacheKey` for list of available options in this field.
    */
   matchKey?: string;
+}
+/**
+ * Transformer to apply a custom transformation to your data sources
+ */
+export interface CustomTransformConfig {
+  /**
+   * The path to the module that exports the custom transform
+   */
+  path: string;
+  /**
+   * Custom parameters to pass to the transform function
+   */
+  params?: string[];
 }
 export interface FederationTransform {
   types?: FederationTransformType[];
@@ -888,19 +901,6 @@ export interface SnapshotTransformConfig {
    * Path to the directory of the generated snapshot files
    */
   outputDir: string;
-}
-/**
- * Transformer to apply a custom transformation to your data sources
- */
-export interface CustomTransformConfig {
-  /**
-   * The path to the module that exports the custom transform
-   */
-  path: string;
-  /**
-   * Custom parameters to pass to the transform function
-   */
-  params?: string[];
 }
 export interface AdditionalResolverObject {
   type: string;

@@ -1,7 +1,12 @@
-import { MeshHandlerLibrary, YamlConfig } from '@graphql-mesh/types';
+import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
 import { JSONSchemaVisitor, getFileName } from './json-schema-visitor';
 import urlJoin from 'url-join';
-import { readFileOrUrlWithCache, stringInterpolator, parseInterpolationStrings, isUrl } from '@graphql-mesh/utils';
+import {
+  readFileOrUrlWithCache,
+  stringInterpolator,
+  parseInterpolationStrings,
+  isUrl,
+} from '@jakeblaxon-graphql-mesh/utils';
 import AggregateError from 'aggregate-error';
 import { fetchache, Request, KeyValueCache } from 'fetchache';
 import { JSONSchemaDefinition } from './json-schema-types';

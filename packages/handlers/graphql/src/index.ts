@@ -1,4 +1,4 @@
-import { MeshHandlerLibrary, YamlConfig } from '@graphql-mesh/types';
+import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
 import { fetchache, Request } from 'fetchache';
 import { UrlLoader } from '@graphql-tools/url-loader';
 import { GraphQLSchema, buildClientSchema, introspectionFromSchema } from 'graphql';

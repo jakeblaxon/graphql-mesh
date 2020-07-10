@@ -1,5 +1,5 @@
-import { YamlConfig, Hooks, KeyValueCache } from '@graphql-mesh/types';
-import InMemoryLRUCache from '@graphql-mesh/cache-inmemory-lru';
+import { YamlConfig, Hooks, KeyValueCache } from '@jakeblaxon-graphql-mesh/types';
+import InMemoryLRUCache from '@jakeblaxon-graphql-mesh/cache-inmemory-lru';
 import { addResolversToSchema } from '@graphql-tools/schema';
 import {
   GraphQLSchema,
@@ -15,7 +15,7 @@ import CacheTransform from '../src';
 import { computeCacheKey } from '../src/compute-cache-key';
 import objectHash from 'object-hash';
 import { format } from 'date-fns';
-import { applyResolversHooksToSchema } from '@graphql-mesh/runtime';
+import { applyResolversHooksToSchema } from '@jakeblaxon-graphql-mesh/runtime';
 import { EventEmitter } from 'events';
 import { wrapSchema } from '@graphql-tools/wrap';
 

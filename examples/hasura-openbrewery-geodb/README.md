@@ -37,7 +37,7 @@ yarn init
 ```
 Answer the questions of `yarn` about our new project, then install GraphQL Mesh dependencies;
 ```bash
-yarn add graphql @graphql-mesh/cli @graphql-mesh/json-schema
+yarn add graphql @jakeblaxon-graphql-mesh/cli @jakeblaxon-graphql-mesh/json-schema
 ```
 
 ### Create Proxy GraphQL API to OpenBrewery

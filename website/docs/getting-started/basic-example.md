@@ -14,10 +14,10 @@ sources:
         source: https://api.apis.guru/v2/specs/wikimedia.org/1.0.0/swagger.yaml
 ```
 
-This demo will use the public API pf Wikipedia, which uses `openapi` spec, so we'll need to make sure we have `@graphql-mesh/openapi` handler installed as well:
+This demo will use the public API pf Wikipedia, which uses `openapi` spec, so we'll need to make sure we have `@jakeblaxon-graphql-mesh/openapi` handler installed as well:
 
 ```
-$ yarn add graphql @graphql-mesh/openapi
+$ yarn add graphql @jakeblaxon-graphql-mesh/openapi
 ```
 
 ### Try your new API
@@ -65,14 +65,14 @@ You can use the Mesh `GraphQLSchema` instance to query your data from your appli
 
 Start by load and parsing your configuration file, and pass it to `getMesh`, this will return for your a modified version of GraphQL's `execute`, so you can use it directly to fetch your data:
 
-You need to install `@graphql-mesh/runtime` to access GraphQL Mesh Schema inside your code.
+You need to install `@jakeblaxon-graphql-mesh/runtime` to access GraphQL Mesh Schema inside your code.
 
 ```
-$ yarn add @graphql-mesh/runtime
+$ yarn add @jakeblaxon-graphql-mesh/runtime
 ```
 
 ```js
-const { getMesh, findAndParseConfig } = require('@graphql-mesh/runtime');
+const { getMesh, findAndParseConfig } = require('@jakeblaxon-graphql-mesh/runtime');
 
 async function test() {
   // This will load the config file from the default location (process.cwd)

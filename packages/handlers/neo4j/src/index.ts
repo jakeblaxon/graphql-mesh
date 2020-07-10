@@ -1,6 +1,6 @@
 import { makeAugmentedSchema, inferSchema } from 'neo4j-graphql-js';
 import neo4j from 'neo4j-driver';
-import { YamlConfig, MeshHandlerLibrary } from '@graphql-mesh/types';
+import { YamlConfig, MeshHandlerLibrary } from '@jakeblaxon-graphql-mesh/types';
 
 const handler: MeshHandlerLibrary<YamlConfig.Neo4JHandler> = {
   async getMeshSource({ name, cache, config, hooks }) {

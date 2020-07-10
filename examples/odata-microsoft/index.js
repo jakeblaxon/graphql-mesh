@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const port = process.env.PORT || 4000;
 
-const { findAndParseConfig, getMesh } = require('@graphql-mesh/runtime');
+const { findAndParseConfig, getMesh } = require('@jakeblaxon-graphql-mesh/runtime');
 
 async function main(){
 

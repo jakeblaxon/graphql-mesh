@@ -10,7 +10,7 @@ This handler allows you to use GraphQL schema created by `graphql-compose-mongoo
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/mongoose
+$ yarn add @jakeblaxon-graphql-mesh/mongoose
 ```
 
 Now, you can use it directly in your Mesh config file:

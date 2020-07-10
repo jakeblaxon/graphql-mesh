@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { GraphQLSchema, GraphQLFieldResolver } from 'graphql';
-import { MeshTransform, YamlConfig, MeshTransformOptions } from '@graphql-mesh/types';
+import { MeshTransform, YamlConfig, MeshTransformOptions } from '@jakeblaxon-graphql-mesh/types';
 import { addMocksToSchema, IMocks } from '@graphql-tools/mock';
 import * as faker from 'faker';
-import { loadFromModuleExportExpressionSync } from '@graphql-mesh/utils';
+import { loadFromModuleExportExpressionSync } from '@jakeblaxon-graphql-mesh/utils';
 
 export default class MockingTransform implements MeshTransform {
   constructor(private options: MeshTransformOptions<YamlConfig.MockingConfig>) {}

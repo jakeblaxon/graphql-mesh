@@ -1,22 +1,22 @@
 import { GraphQLOperation } from './types';
 import { DocumentNode, parse } from 'graphql';
-import { MeshHandlerLibrary, KeyValueCache, YamlConfig, MergerFn } from '@graphql-mesh/types';
+import { MeshHandlerLibrary, KeyValueCache, YamlConfig, MergerFn } from '@jakeblaxon-graphql-mesh/types';
 import { resolve } from 'path';
 import { IResolvers, printSchemaWithDirectives } from '@graphql-tools/utils';
 import { paramCase } from 'param-case';
 import { loadTypedefs } from '@graphql-tools/load';
 import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader';
 import { get, set, kebabCase } from 'lodash';
-import { stringInterpolator } from '@graphql-mesh/utils';
+import { stringInterpolator } from '@jakeblaxon-graphql-mesh/utils';
 import { mergeResolvers } from '@graphql-tools/merge';
 
 export async function getPackage<T>(name: string, type: string): Promise<T> {
   const casedName = paramCase(name);
   const casedType = paramCase(type);
   const possibleNames = [
-    `@graphql-mesh/${casedName}`,
-    `@graphql-mesh/${casedName}-${casedType}`,
-    `@graphql-mesh/${casedType}-${casedName}`,
+    `@jakeblaxon-graphql-mesh/${casedName}`,
+    `@jakeblaxon-graphql-mesh/${casedName}-${casedType}`,
+    `@jakeblaxon-graphql-mesh/${casedType}-${casedName}`,
     casedName,
     `${casedName}-${casedType}`,
     `${casedType}-${casedName}`,

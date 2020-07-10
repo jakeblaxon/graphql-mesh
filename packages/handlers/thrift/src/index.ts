@@ -1,6 +1,10 @@
-import { MeshHandlerLibrary, YamlConfig } from '@graphql-mesh/types';
+import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
 import { parse, ThriftDocument, ThriftErrors, SyntaxType, Comment, FunctionType } from '@creditkarma/thrift-parser';
-import { readFileOrUrlWithCache, parseInterpolationStrings, getInterpolatedHeadersFactory } from '@graphql-mesh/utils';
+import {
+  readFileOrUrlWithCache,
+  parseInterpolationStrings,
+  getInterpolatedHeadersFactory,
+} from '@jakeblaxon-graphql-mesh/utils';
 import AggregateError from 'aggregate-error';
 import {
   GraphQLEnumType,

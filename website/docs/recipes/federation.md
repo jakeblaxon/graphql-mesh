@@ -9,7 +9,7 @@ You can use Apollo Federation as a merging strategy in favor of Schema Stitching
 To get started, install the merger library from NPM:
 
 ```
-$ yarn add @graphql-mesh/merger-federation
+$ yarn add @jakeblaxon-graphql-mesh/merger-federation
 ```
 
 Now, you can use it directly in your Mesh config file:

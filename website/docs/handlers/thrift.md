@@ -10,7 +10,7 @@ This handler allows you to consume [Apache Thrift](https://thrift.apache.org/) `
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/thrift
+$ yarn add @jakeblaxon-graphql-mesh/thrift
 ```
 
 Now, you can use it directly in your Mesh config file:

@@ -10,7 +10,7 @@ This handler allows you to load remote GraphQL schemas and use it with schema-st
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/graphql
+$ yarn add @jakeblaxon-graphql-mesh/graphql
 ```
 
 Now, you can use it directly in your Mesh config file:

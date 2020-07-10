@@ -10,9 +10,9 @@ import {
   MeshContext,
 } from './types';
 import { ensureDocumentNode } from './utils';
-import { Hooks, KeyValueCache, RawSourceOutput, MeshTransform } from '@graphql-mesh/types';
+import { Hooks, KeyValueCache, RawSourceOutput, MeshTransform } from '@jakeblaxon-graphql-mesh/types';
 
-import InMemoryLRUCache from '@graphql-mesh/cache-inmemory-lru';
+import InMemoryLRUCache from '@jakeblaxon-graphql-mesh/cache-inmemory-lru';
 import { applyResolversHooksToSchema } from './resolvers-hooks';
 import { EventEmitter } from 'events';
 import { MESH_CONTEXT_SYMBOL, MESH_API_CONTEXT_SYMBOL } from './constants';

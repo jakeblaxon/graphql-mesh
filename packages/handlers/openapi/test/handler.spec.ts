@@ -1,7 +1,7 @@
-import { Hooks } from '@graphql-mesh/types';
+import { Hooks } from '@jakeblaxon-graphql-mesh/types';
 import { printSchema } from 'graphql';
 import handler from '../src';
-import InMemoryLRUCache from '@graphql-mesh/cache-inmemory-lru';
+import InMemoryLRUCache from '@jakeblaxon-graphql-mesh/cache-inmemory-lru';
 import { resolve } from 'path';
 import { EventEmitter } from 'events';
 

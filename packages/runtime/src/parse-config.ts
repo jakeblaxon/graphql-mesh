@@ -8,7 +8,7 @@ import {
   resolveMerger,
   resolveAdditionalTypeDefs,
 } from './utils';
-import { YamlConfig, getJsonSchema } from '@graphql-mesh/types';
+import { YamlConfig, getJsonSchema } from '@jakeblaxon-graphql-mesh/types';
 import Ajv from 'ajv';
 
 declare global {

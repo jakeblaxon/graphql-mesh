@@ -1,5 +1,5 @@
-import { KeyValueCache } from '@graphql-mesh/types';
-import { readFileOrUrlWithCache } from '@graphql-mesh/utils';
+import { KeyValueCache } from '@jakeblaxon-graphql-mesh/types';
+import { readFileOrUrlWithCache } from '@jakeblaxon-graphql-mesh/utils';
 import { ClientReadableStream, ClientUnaryCall, Metadata, MetadataValue } from '@grpc/grpc-js';
 import { pathExistsSync } from 'fs-extra';
 import { GraphQLEnumTypeConfig } from 'graphql';

@@ -1,4 +1,4 @@
-import { KeyValueCache } from '@graphql-mesh/types';
+import { KeyValueCache } from '@jakeblaxon-graphql-mesh/types';
 import { isAbsolute, join } from 'path';
 import { cwd } from 'process';
 import { get, set } from 'lodash';

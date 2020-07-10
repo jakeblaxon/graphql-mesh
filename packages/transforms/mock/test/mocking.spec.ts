@@ -1,8 +1,8 @@
 import { makeExecutableSchema } from '@graphql-tools/schema';
 import { wrapSchema } from '@graphql-tools/wrap';
-import { YamlConfig, Hooks } from '@graphql-mesh/types';
+import { YamlConfig, Hooks } from '@jakeblaxon-graphql-mesh/types';
 import { graphql } from 'graphql';
-import InMemoryLRUCache from '@graphql-mesh/cache-inmemory-lru';
+import InMemoryLRUCache from '@jakeblaxon-graphql-mesh/cache-inmemory-lru';
 import { EventEmitter } from 'events';
 import MockingTransform from '../src';
 

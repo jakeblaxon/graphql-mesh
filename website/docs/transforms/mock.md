@@ -9,7 +9,7 @@ The `mock` transform allow you to apply mocking for development usage.
 To get started with this transform, install it from npm:
 
 ```
-yarn add @graphql-mesh/transform-mock
+yarn add @jakeblaxon-graphql-mesh/transform-mock
 ```
 
 ## How to use?

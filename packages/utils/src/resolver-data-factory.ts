@@ -1,7 +1,7 @@
 import { GraphQLFieldConfigArgumentMap, GraphQLNonNull, GraphQLID } from 'graphql';
 import { stringInterpolator } from './string-interpolator';
 import { Headers } from 'fetchache';
-import { ResolverData } from '@graphql-mesh/types';
+import { ResolverData } from '@jakeblaxon-graphql-mesh/types';
 
 export type ResolverDataBasedFactory<T> = (data: ResolverData) => T;
 

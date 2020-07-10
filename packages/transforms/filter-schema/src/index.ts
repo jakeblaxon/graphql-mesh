@@ -1,7 +1,7 @@
 import { matcher } from 'micromatch';
 
 import { GraphQLSchema } from 'graphql';
-import { MeshTransform, YamlConfig, MeshTransformOptions } from '@graphql-mesh/types';
+import { MeshTransform, YamlConfig, MeshTransformOptions } from '@jakeblaxon-graphql-mesh/types';
 import { FilterRootFields, FilterObjectFields } from '@graphql-tools/wrap';
 import {
   applySchemaTransforms,

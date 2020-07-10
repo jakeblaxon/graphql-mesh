@@ -12,7 +12,7 @@ With this handler, you can easily customize and control the built GraphQL schema
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/json-schema
+$ yarn add @jakeblaxon-graphql-mesh/json-schema
 ```
 
 Now, you can use it directly in your Mesh config file:

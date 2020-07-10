@@ -10,7 +10,7 @@ This handler allows you to use GraphQL schema created by [PostGraphile](https://
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/postgraphile
+$ yarn add @jakeblaxon-graphql-mesh/postgraphile
 ```
 
 Now, you can use it directly in your Mesh config file:

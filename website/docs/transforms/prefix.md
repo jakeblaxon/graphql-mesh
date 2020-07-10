@@ -9,7 +9,7 @@ The `prefix` transform allow you prefix GraphQL types and GraphQL root operation
 You can use it to easily "namespace" APIs in your unified API and avoid conflicts. 
 
 ```
-yarn add @graphql-mesh/transform-prefix
+yarn add @jakeblaxon-graphql-mesh/transform-prefix
 ```
 
 ## How to use?

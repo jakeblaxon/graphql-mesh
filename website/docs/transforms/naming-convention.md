@@ -7,7 +7,7 @@ sidebar_label: Naming Convention
 The `naming-convention` transform allow you apply naming convention to GraphQL types and GraphQL fields easily. 
 
 ```
-yarn add @graphql-mesh/transform-naming-convention
+yarn add @jakeblaxon-graphql-mesh/transform-naming-convention
 ```
 
 ## How to use?

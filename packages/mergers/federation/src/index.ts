@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-expressions */
-import { MergerFn, RawSourceOutput } from '@graphql-mesh/types';
+import { MergerFn, RawSourceOutput } from '@jakeblaxon-graphql-mesh/types';
 import { GraphQLSchema, print, graphql, extendSchema } from 'graphql';
 import { wrapSchema } from '@graphql-tools/wrap';
 import { ApolloGateway } from '@apollo/gateway';

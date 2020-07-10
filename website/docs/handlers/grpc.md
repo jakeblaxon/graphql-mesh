@@ -8,7 +8,7 @@ sidebar_label: gRPC
 This handler allows you to load [gRPC](https://grpc.io/) definition files (`.proto`).
 
 ```
-$ yarn add @graphql-mesh/grpc
+$ yarn add @jakeblaxon-graphql-mesh/grpc
 ```
 
 Now, you can use it directly in your Mesh config file:

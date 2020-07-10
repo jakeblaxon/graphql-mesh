@@ -7,7 +7,7 @@ sidebar_label: Rename
 The `rename` transform allow you rename GraphQL types and GraphQL fields easily. 
 
 ```
-yarn add @graphql-mesh/transform-rename
+yarn add @jakeblaxon-graphql-mesh/transform-rename
 ```
 
 ## How to use?

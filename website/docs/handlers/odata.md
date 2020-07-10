@@ -10,7 +10,7 @@ This handler allows you to load remote [OData](https://www.odata.org/) metadata/
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/odata
+$ yarn add @jakeblaxon-graphql-mesh/odata
 ```
 
 Now, you can use it directly in your Mesh config file:

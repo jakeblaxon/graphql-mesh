@@ -1,5 +1,5 @@
 import { GraphQLSchema } from 'graphql';
-import { MeshTransform, YamlConfig, MeshTransformOptions } from '@graphql-mesh/types';
+import { MeshTransform, YamlConfig, MeshTransformOptions } from '@jakeblaxon-graphql-mesh/types';
 import { RenameTypes, RenameObjectFields, RenameRootFields, RenameRootTypes } from '@graphql-tools/wrap';
 import {
   applySchemaTransforms,

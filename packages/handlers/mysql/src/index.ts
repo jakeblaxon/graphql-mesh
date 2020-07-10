@@ -1,4 +1,4 @@
-import { MeshHandlerLibrary, YamlConfig } from '@graphql-mesh/types';
+import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
 import { SchemaComposer, EnumTypeComposerValueConfigDefinition } from 'graphql-compose';
 import { TableForeign, createPool, Pool } from 'mysql';
 import { upgrade, introspection } from 'mysql-utilities';

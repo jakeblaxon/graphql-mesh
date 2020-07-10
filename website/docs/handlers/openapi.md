@@ -12,7 +12,7 @@ You can import it using remote/local `.json` or `.yaml`.
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/openapi
+$ yarn add @jakeblaxon-graphql-mesh/openapi
 ```
 
 Now, you can use it directly in your Mesh config file:

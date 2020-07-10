@@ -13,7 +13,7 @@ It allow you to configure custom invalidation rules (by ttl / mutation), and sel
 To get started with this transform, install it from npm:
 
 ```
-yarn add @graphql-mesh/transform-cache
+yarn add @jakeblaxon-graphql-mesh/transform-cache
 ```
 
 > GraphQL Mesh uses a default in-memory LRU cache, but you can replace it with any other key=>value cache mechanism. See [custom cache section](/docs/recipes/custom-cache) for more info.

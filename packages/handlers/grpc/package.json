@@ -1,6 +1,6 @@
 {
-  "name": "@graphql-mesh/grpc",
-  "version": "0.2.13",
+  "name": "@jakeblaxon-graphql-mesh/grpc",
+  "version": "0.2.15",
   "sideEffects": false,
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -13,8 +13,8 @@
     "graphql": "*"
   },
   "dependencies": {
-    "@graphql-mesh/types": "0.2.13",
-    "@graphql-mesh/utils": "0.2.13",
+    "@jakeblaxon-graphql-mesh/types": "0.2.15",
+    "@jakeblaxon-graphql-mesh/utils": "0.2.15",
     "@grpc/grpc-js": "1.1.1",
     "@grpc/proto-loader": "0.5.4",
     "camel-case": "4.1.1",

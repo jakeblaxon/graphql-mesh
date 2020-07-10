@@ -1,7 +1,7 @@
-import { MeshHandlerLibrary, YamlConfig } from '@graphql-mesh/types';
+import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
 import { soapGraphqlSchema, createSoapClient } from 'soap-graphql';
 import { WSSecurityCert } from 'soap';
-import { readFileOrUrlWithCache } from '@graphql-mesh/utils';
+import { readFileOrUrlWithCache } from '@jakeblaxon-graphql-mesh/utils';
 import { Request, fetchache } from 'fetchache';
 
 const handler: MeshHandlerLibrary<YamlConfig.SoapHandler> = {

@@ -6,7 +6,7 @@ import {
   MergerFn,
   MeshTransformLibrary,
   RawSourceOutput,
-} from '@graphql-mesh/types';
+} from '@jakeblaxon-graphql-mesh/types';
 import { DocumentNode } from 'graphql';
 import { IResolvers } from '@graphql-tools/utils';
 import { MESH_CONTEXT_SYMBOL } from './constants';

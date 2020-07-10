@@ -1,5 +1,5 @@
 import { buildSchemaFromDatabase, buildSchemaFromInfile } from 'tuql';
-import { MeshHandlerLibrary, YamlConfig } from '@graphql-mesh/types';
+import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
 
 const handler: MeshHandlerLibrary<YamlConfig.TuqlHandler> = {
   async getMeshSource({ config }) {

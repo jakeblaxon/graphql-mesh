@@ -7,7 +7,7 @@ sidebar_label: Resolvers Composition
 The `resolversComposition` transform allow you add middleware to your existing resolvers.
 
 ```
-yarn add @graphql-mesh/transform-resolvers-composition
+yarn add @jakeblaxon-graphql-mesh/transform-resolvers-composition
 ```
 
 ## How to use?

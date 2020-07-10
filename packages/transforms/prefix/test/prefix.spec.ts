@@ -1,7 +1,7 @@
 import PrefixTransform from '../src';
 import { buildSchema, printSchema, GraphQLSchema } from 'graphql';
-import InMemoryLRUCache from '@graphql-mesh/cache-inmemory-lru';
-import { Hooks } from '@graphql-mesh/types';
+import InMemoryLRUCache from '@jakeblaxon-graphql-mesh/cache-inmemory-lru';
+import { Hooks } from '@jakeblaxon-graphql-mesh/types';
 import { EventEmitter } from 'events';
 import { wrapSchema } from '@graphql-tools/wrap';
 

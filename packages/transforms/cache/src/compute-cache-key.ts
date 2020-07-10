@@ -1,6 +1,6 @@
 import { GraphQLResolveInfo } from 'graphql';
 import objectHash from 'object-hash';
-import { stringInterpolator } from '@graphql-mesh/utils';
+import { stringInterpolator } from '@jakeblaxon-graphql-mesh/utils';
 import graphqlFields from 'graphql-fields';
 
 export function computeCacheKey(options: {

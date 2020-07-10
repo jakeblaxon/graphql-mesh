@@ -10,7 +10,7 @@ This handler allows you to generate GraphQL schema using `graphql-compose-mysql`
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/mysql
+$ yarn add @jakeblaxon-graphql-mesh/mysql
 ```
 
 Now, you can use it directly in your Mesh config file:

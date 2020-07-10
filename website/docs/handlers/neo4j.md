@@ -10,7 +10,7 @@ This handler allows you to use GraphQL schema created by `neo4j-graphql-js`.
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/neo4j
+$ yarn add @jakeblaxon-graphql-mesh/neo4j
 ```
 
 Now, you can use it directly in your Mesh config file:

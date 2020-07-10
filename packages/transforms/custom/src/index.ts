@@ -1,6 +1,6 @@
 import { GraphQLSchema } from 'graphql';
-import { MeshTransform, YamlConfig, MeshTransformOptions } from '@graphql-mesh/types';
-import { loadFromModuleExportExpressionSync } from '@graphql-mesh/utils';
+import { MeshTransform, YamlConfig, MeshTransformOptions } from '@jakeblaxon-graphql-mesh/types';
+import { loadFromModuleExportExpressionSync } from '@jakeblaxon-graphql-mesh/utils';
 import {
   applySchemaTransforms,
   applyRequestTransforms,

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { MeshHandlerLibrary, YamlConfig } from '@graphql-mesh/types';
+import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
 import { execute, subscribe } from 'graphql';
 import { withPostGraphileContext, Plugin } from 'postgraphile';
 import { getPostGraphileBuilder } from 'postgraphile-core';

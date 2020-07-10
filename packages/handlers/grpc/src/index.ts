@@ -1,5 +1,5 @@
-import { MeshHandlerLibrary, YamlConfig } from '@graphql-mesh/types';
-import { withCancel } from '@graphql-mesh/utils';
+import { MeshHandlerLibrary, YamlConfig } from '@jakeblaxon-graphql-mesh/types';
+import { withCancel } from '@jakeblaxon-graphql-mesh/utils';
 import {
   ChannelCredentials,
   ClientReadableStream,

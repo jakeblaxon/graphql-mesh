@@ -11,7 +11,7 @@ The snapshot transform writes the responses of your remote data source to your f
 To get started with this transform, install it from npm:
 
 ```
-yarn add @graphql-mesh/transform-snapshot
+yarn add @jakeblaxon-graphql-mesh/transform-snapshot
 ```
 
 ## How to use?

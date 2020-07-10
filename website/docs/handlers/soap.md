@@ -10,7 +10,7 @@ This handler allows you to consume [SOAP](https://www.soapui.org/) `WSDL` files 
 To get started, install the handler library from NPM:
 
 ```
-$ yarn add @graphql-mesh/soap
+$ yarn add @jakeblaxon-graphql-mesh/soap
 ```
 
 Now, you can use it directly in your Mesh config file:
