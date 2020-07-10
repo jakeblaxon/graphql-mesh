@@ -15,7 +15,7 @@ export default class FilterTransform implements MeshTransform {
   constructor(options: MeshTransformOptions<YamlConfig.Transform['custom']>) {
     const { config } = options;
     const mod = loadFromModuleExportExpressionSync(config.path, 'default');
-    this.transforms.push(mod(...(config.params || [])));
+    this.transforms.push(mod(config.config));
   }
 
   transformSchema(schema: GraphQLSchema) {

@@ -17,6 +17,50 @@ type RedisConfig {
   port: Int
   password: String
 }
+type Query {
+  require: [String]
+  """Defines the list of your external data sources for your API mesh"""
+  sources: [Source!]!
+  """Transform to apply to the unified mesh schema"""
+  transforms: [Transform]
+  """Additional type definitions, or type definitions overrides you wish to add to the schema mesh"""
+  additionalTypeDefs: String
+  """Additional resolvers, or resolvers overrides you wish to add to the schema mesh"""
+  additionalResolvers: [AdditionalResolver]
+  """Backend cache"""
+  cache: Cache
+  """Merge method"""
+  merger: String
+}
+scalar JSON
+type Source {
+  """The name you wish to set to your remote API, this will be used for building the GraphQL context"""
+  name: String!
+  """Point to the handler you wish to use, it can either be a predefined handler, or a custom"""
+  handler: Handler!
+  """List of transforms to apply to the current API source, before unifying it with the rest of the sources"""
+  transforms: [Transform]
+}
+type Transform {
+  """Transformer to apply caching for your data sources"""
+  cache: [CacheTransformConfig!]
+  """Transformer to apply a custom transformation to your data sources"""
+  custom: CustomTransformConfig
+  federation: FederationTransform
+  filterSchema: [String]
+  """Mock configuration for your source"""
+  mock: MockingConfig
+  """Transformer to apply naming convention to GraphQL Types"""
+  namingConvention: NamingConventionTransformConfig
+  """Prefix transform"""
+  prefix: PrefixTransformConfig
+  """Transformer to apply rename of a GraphQL type"""
+  rename: [RenameTransformObject!]
+  """Transformer to apply composition to resolvers"""
+  resolversComposition: [ResolversCompositionTransformObject!]
+  """Configuration for Snapshot extension"""
+  snapshot: SnapshotTransformConfig
+}
 type Handler {
   """Handler for remote/local/third-party GraphQL schema"""
   graphql: GraphQLHandler
@@ -40,6 +84,19 @@ type Handler {
   thrift: ThriftHandler
   """Handler for SQLite database, based on `tuql`"""
   tuql: TuqlHandler
+}
+union AdditionalResolver = String | AdditionalResolverObject
+type AdditionalResolverObject {
+  type: String!
+  field: String!
+  requiredSelectionSet: String
+  targetSource: String!
+  targetMethod: String!
+  args: JSON!
+  returnData: String
+  resultSelectedFields: JSON
+  resultSelectionSet: String
+  resultDepth: Int
 }
 type GraphQLHandler @md {
   """A url to your remote GraphQL endpoint"""
@@ -281,63 +338,6 @@ type PostGraphilePool {
   port: Int
   connectionString: String
 }
-type Query {
-  require: [String]
-  """Defines the list of your external data sources for your API mesh"""
-  sources: [Source!]!
-  """Transform to apply to the unified mesh schema"""
-  transforms: [Transform]
-  """Additional type definitions, or type definitions overrides you wish to add to the schema mesh"""
-  additionalTypeDefs: String
-  """Additional resolvers, or resolvers overrides you wish to add to the schema mesh"""
-  additionalResolvers: [AdditionalResolver]
-  """Backend cache"""
-  cache: Cache
-  """Merge method"""
-  merger: String
-}
-scalar JSON
-type Source {
-  """The name you wish to set to your remote API, this will be used for building the GraphQL context"""
-  name: String!
-  """Point to the handler you wish to use, it can either be a predefined handler, or a custom"""
-  handler: Handler!
-  """List of transforms to apply to the current API source, before unifying it with the rest of the sources"""
-  transforms: [Transform]
-}
-type Transform {
-  """Transformer to apply caching for your data sources"""
-  cache: [CacheTransformConfig!]
-  """Transformer to apply a custom transformation to your data sources"""
-  custom: CustomTransformConfig
-  federation: FederationTransform
-  filterSchema: [String]
-  """Mock configuration for your source"""
-  mock: MockingConfig
-  """Transformer to apply naming convention to GraphQL Types"""
-  namingConvention: NamingConventionTransformConfig
-  """Prefix transform"""
-  prefix: PrefixTransformConfig
-  """Transformer to apply rename of a GraphQL type"""
-  rename: [RenameTransformObject!]
-  """Transformer to apply composition to resolvers"""
-  resolversComposition: [ResolversCompositionTransformObject!]
-  """Configuration for Snapshot extension"""
-  snapshot: SnapshotTransformConfig
-}
-union AdditionalResolver = String | AdditionalResolverObject
-type AdditionalResolverObject {
-  type: String!
-  field: String!
-  requiredSelectionSet: String
-  targetSource: String!
-  targetMethod: String!
-  args: JSON!
-  returnData: String
-  resultSelectedFields: JSON
-  resultSelectionSet: String
-  resultDepth: Int
-}
 type SoapHandler @md {
   """A url to your WSDL"""
   wsdl: String!
@@ -434,8 +434,8 @@ type CacheEffectingOperationConfig {
 type CustomTransformConfig @md {
   """The path to the module that exports the custom transform"""
   path: String!
-  """Custom parameters to pass to the transform function"""
-  params: [String!]
+  """Custom config object to pass as a parameter to the transform function"""
+  config: JSON
 }
 type FederationTransform @md {
   types: [FederationTransformType!]

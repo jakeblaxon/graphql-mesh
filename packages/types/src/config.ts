@@ -698,9 +698,11 @@ export interface CustomTransformConfig {
    */
   path: string;
   /**
-   * Custom parameters to pass to the transform function
+   * Custom config object to pass as a parameter to the transform function
    */
-  params?: string[];
+  config?: {
+    [k: string]: any;
+  };
 }
 export interface FederationTransform {
   types?: FederationTransformType[];

@@ -11,7 +11,7 @@ type CustomTransformConfig @md {
   """
   path: String!
   """
-  Custom parameters to pass to the transform function
+  Custom config object to pass as a parameter to the transform function
   """
-  params: [String!]
+  config: JSON
 }
