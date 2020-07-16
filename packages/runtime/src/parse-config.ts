@@ -163,6 +163,6 @@ export async function findAndParseConfig(options?: { configName?: string } & Con
   });
   const results = await explorer.search(dir);
   const config = results?.config;
-  validateConfig(config);
+  // validateConfig(config);
   return processConfig(config, { dir, ignoreAdditionalResolvers });
 }

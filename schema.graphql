@@ -284,61 +284,6 @@ type PostGraphilePool {
   port: Int
   connectionString: String
 }
-type Query {
-  require: [String]
-  """Defines the list of your external data sources for your API mesh"""
-  sources: [Source!]!
-  """Transform to apply to the unified mesh schema"""
-  transforms: [Transform]
-  """Additional type definitions, or type definitions overrides you wish to add to the schema mesh"""
-  additionalTypeDefs: String
-  """Additional resolvers, or resolvers overrides you wish to add to the schema mesh"""
-  additionalResolvers: [AdditionalResolver]
-  """Backend cache"""
-  cache: Cache
-  """Merge method"""
-  merger: String
-}
-scalar JSON
-type Source {
-  """The name you wish to set to your remote API, this will be used for building the GraphQL context"""
-  name: String!
-  """Point to the handler you wish to use, it can either be a predefined handler, or a custom"""
-  handler: Handler!
-  """List of transforms to apply to the current API source, before unifying it with the rest of the sources"""
-  transforms: [Transform]
-}
-type Transform {
-  """Transformer to apply caching for your data sources"""
-  cache: [CacheTransformConfig!]
-  federation: FederationTransform
-  filterSchema: [String]
-  """Mock configuration for your source"""
-  mock: MockingConfig
-  """Transformer to apply naming convention to GraphQL Types"""
-  namingConvention: NamingConventionTransformConfig
-  """Prefix transform"""
-  prefix: PrefixTransformConfig
-  """Transformer to apply rename of a GraphQL type"""
-  rename: [RenameTransformObject!]
-  """Transformer to apply composition to resolvers"""
-  resolversComposition: [ResolversCompositionTransformObject!]
-  """Configuration for Snapshot extension"""
-  snapshot: SnapshotTransformConfig
-}
-union AdditionalResolver = String | AdditionalResolverObject
-type AdditionalResolverObject {
-  type: String!
-  field: String!
-  requiredSelectionSet: String
-  targetSource: String!
-  targetMethod: String!
-  args: JSON!
-  returnData: String
-  resultSelectedFields: JSON
-  resultSelectionSet: String
-  resultDepth: Int
-}
 type SoapHandler @md {
   """A url to your WSDL"""
   wsdl: String!
@@ -397,6 +342,24 @@ enum ThriftProtocolType {
   binary
   compact
   json
+}
+type Transform {
+  """Transformer to apply caching for your data sources"""
+  cache: [CacheTransformConfig!]
+  federation: FederationTransform
+  filterSchema: [String]
+  """Mock configuration for your source"""
+  mock: MockingConfig
+  """Transformer to apply naming convention to GraphQL Types"""
+  namingConvention: NamingConventionTransformConfig
+  """Prefix transform"""
+  prefix: PrefixTransformConfig
+  """Transformer to apply rename of a GraphQL type"""
+  rename: [RenameTransformObject!]
+  """Transformer to apply composition to resolvers"""
+  resolversComposition: [ResolversCompositionTransformObject!]
+  """Configuration for Snapshot extension"""
+  snapshot: SnapshotTransformConfig
 }
 type CacheTransformConfig @md {
   """The type and field to apply cache to, you can use wild cards as well, for example: `Query.*`"""
@@ -573,5 +536,42 @@ type TuqlHandler @md {
   db: String
   """Path to the SQL Dump file if you want to build a in-memory database"""
   infile: String
+}
+type Query {
+  require: [String]
+  """Defines the list of your external data sources for your API mesh"""
+  sources: [Source!]!
+  """Transform to apply to the unified mesh schema"""
+  transforms: [Transform]
+  """Additional type definitions, or type definitions overrides you wish to add to the schema mesh"""
+  additionalTypeDefs: String
+  """Additional resolvers, or resolvers overrides you wish to add to the schema mesh"""
+  additionalResolvers: [AdditionalResolver]
+  """Backend cache"""
+  cache: Cache
+  """Merge method"""
+  merger: String
+}
+scalar JSON
+type Source {
+  """The name you wish to set to your remote API, this will be used for building the GraphQL context"""
+  name: String!
+  """Point to the handler you wish to use, it can either be a predefined handler, or a custom"""
+  handler: Handler!
+  """List of transforms to apply to the current API source, before unifying it with the rest of the sources"""
+  transforms: [Transform]
+}
+union AdditionalResolver = String | AdditionalResolverObject
+type AdditionalResolverObject {
+  type: String!
+  field: String!
+  requiredSelectionSet: String
+  targetSource: String!
+  targetMethod: String!
+  args: JSON!
+  returnData: String
+  resultSelectedFields: JSON
+  resultSelectionSet: String
+  resultDepth: Int
 }
 directive @md on OBJECT
